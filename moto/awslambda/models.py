@@ -442,9 +442,8 @@ class EventSourceMapping(BaseModel):
         spec = {
             'FunctionName': properties['FunctionName'],
             'EventSourceArn': properties['EventSourceArn'],
-            'StartingPosition': properties['StartingPosition']
         }
-        optional_properties = 'BatchSize Enabled StartingPositionTimestamp'.split()
+        optional_properties = 'BatchSize Enabled StartingPositionTimestamp StartingPosition'.split()
         for prop in optional_properties:
             if prop in properties:
                 spec[prop] = properties[prop]
